@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    @font-face {
+        font-family: "Inter-VariableFont_slntwght";
+        src: url(../../assets/fonts/Inter-VariableFont_slntwght.ttf);
+    }
+
+    @font-face {
+        font-family: "Inter-Bold";
+        src: url(../../assets/fonts/static/Inter-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: "Inter-Regular";
+        src: url(../../assets/fonts/static/Inter-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: "Inter-SemiBold";
+        src: url(../../assets/fonts/static/Inter-SemiBold.ttf);
+    }
+
+    .mainCardFlex{
+        @apply flex flex-col gap-3 bg-card rounded-xl text-copy-primary font-Inter-Bold w-[320px] mx-auto -mt-4 relative overflow-hidden place-items-center px-5 pt-8 pb-5;        
+    }
+
+    .figureCircle{
+        @apply w-[92px] h-[92px] rounded-full;
+    }
+
+    .divCells{
+        @apply bg-cta rounded-lg w-[284px];
+    }
+
+    .divCellsFlex{
+        @apply flex flex-row gap-2 place-content-start place-items-center py-2 text-xs font-Inter-SemiBold transition delay-150 hover:bg-copy-secondary hover:text-cta-active duration-300 hover:cursor-pointer;
+    }
+}
+
+
+@layer utilities{
+    .lightMode {
+        --background: 204, 213, 174;                /* rgb(204, 213, 174); */
+      
+        --border: 212, 212, 212;                    /* rgba(212, 212, 212); */
+        --card: 233, 237, 201;                      /* rgb(233, 237, 201); */
+      
+        --copy-primary: 23, 23, 23;                 /* rgba(23, 23, 23); */
+        --copy-secondary: 250, 237, 205;            /* rgb(250, 237, 205); */
+        --h1-color-GreenYellow: 124, 58, 237;     /* rgba(124, 58, 237) */
+      
+        --cta: 254, 250, 224;                       /* rgb(254, 250, 224); */
+        --cta-active: 124, 58, 237;                 /* rgba(124, 58, 237); */
+        --cta-text: 255, 255, 255;                  /* rgba(255, 255, 255); */
+      
+        background: rgba(var(--background));
+      }
+
+      .darkMode {
+        --background: 20, 20, 20;                   /* rgba(20, 20, 20); */
+      
+        --border: 235, 211, 248;                    /* rgba(235, 211, 248);*/
+        --card: 31, 31, 31;                         /* rgba(31, 31, 31);*/
+      
+        --copy-primary: 250, 250, 250;              /* rgba(250, 250, 250)*/
+        --copy-secondary: 197, 248, 42;             /* rgba(197, 248, 42)*/
+        --h1-color-GreenYellow: 197, 248, 42;     /* rgba(197, 248, 42)*/
+      
+        --cta: 51, 51, 51;                          /* rgba(51, 51, 51)*/
+        --cta-active: 20, 20, 20;                   /* rgba(20, 20, 20)*/
+        --cta-text: 255, 255, 255;                  /* rgba(255, 255, 255)*/
+      
+        background: rgba(var(--background));
+      }
+
+      .redMode {
+        --background: 255, 77, 109;                  /* rgba(255, 77, 109)*/
+      
+        --border: 185, 28, 28;                      /* rgba(185, 28, 28)*/
+        --card: 255, 23, 127;                       /* rgba(255, 23, 127)*/
+      
+        --copy-primary: 250, 250, 250;              /* rgba(250, 250, 250)*/
+        --copy-secondary: 255, 116, 178;            /* rgba(255, 116, 178)*/
+        --h1-color-GreenYellow: 197, 248, 42;     /* rgba(197, 248, 42)*/
+      
+        --cta: 255, 117, 143;                       /* rgba(255, 117, 143)*/ 
+        --cta-active: 255, 0, 114;                /* rgba(255, 0, 114)*/ 
+        --cta-text: 239, 68, 68;                    /* rgba(239, 68, 68)*/ 
+      
+        background: rgba(var(--background));
+      }
+
+      :root {
+        --grape: 114, 35, 204;              /* rgba(114, 35, 204)*/ 
+      }
+}

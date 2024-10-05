@@ -1,0 +1,10 @@
+# Logs
+
+node_modules
+
+# Editor directories and files
+.vscode/*
+*.md
+package-lock.json
+package.json
+tailwind.config.js
